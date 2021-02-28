@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/analytics';
+// import 'firebase/analytics';
 
 
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -22,7 +22,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+//const analytics = firebase.analytics();
 
 document.addEventListener('DOMContentLoaded', function() {
   navigator.geolocation.getCurrentPosition(
