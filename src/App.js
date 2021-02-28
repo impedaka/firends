@@ -24,6 +24,15 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 const analytics = firebase.analytics();
 
+document.addEventListener('DOMContentLoaded', function() {
+  navigator.geolocation.getCurrentPosition(
+    data => {
+      console.log(data)
+    }, 
+    error => console.log(error)
+  );
+});
+
 function App() {
 
   const [user] = useAuthState(auth);
