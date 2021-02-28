@@ -1,9 +1,11 @@
 import './App.css';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/analytics';
+
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
@@ -16,7 +18,7 @@ firebase.initializeApp({
   messagingSenderId: "681373402737",
   appId: "1:681373402737:web:191835635a81b72dfabdd0",
   measurementId: "G-C2HXL0BRYW"
-})
+});
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
