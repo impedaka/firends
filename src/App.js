@@ -22,4 +22,15 @@ function App() {
   );
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Send a GET request to the URL
+  fetch('https://api.nasa.gov/planetary/apod?api_key=RxdvkBaLfpVSPVF3Q9dYOepXvuBL3LhUeWD1eibG')
+  // Put response into json form
+  .then(response => response.json())
+  .then(data => {
+      // Log data to the console
+      console.log(data);
+  });
+});
+
 export default App;
